@@ -45,5 +45,12 @@ or
 ```bash
 python setup.py install
 ```
+
+## Run the Streamlit App
+You can run the streamlit app by running the following command
+```bash
+streamlit run app.py
+```
+Interface will open in your browser wher you can put the data of the customer and get the prediction of the churn customer (will stay or will leave)
 # Conclusion
 - I worked on this project to get use to structuring my Machine Learning projects and not gather everything in one file or one notebook, and also use 'pytest','makefile','setup.py'... in my projects. Thats why i used some simple models just to practice.

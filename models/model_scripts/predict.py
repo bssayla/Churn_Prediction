@@ -155,8 +155,6 @@ def get_customer_data()-> tuple:
         one_hot_card_category(Card_Category,customer_data)
         one_hot_Gender(Gender,customer_data)
         st.write("Predicting Customer Churn: ")
-        print("------------------HERE-----------------")
-        print(len(customer_data.keys()))
         prediction = predict_customer_churn(customer_data)
 
     return customer_data, prediction
@@ -164,7 +162,7 @@ def get_customer_data()-> tuple:
 
 
 def predict_customer_churn(customer_data: dict):
-    model = jb.load("../trained_models/first_model_DIFF.pkl")
+    model = jb.load("models/trained_models/first_model_DIFF.pkl")
     customer_data = pd.DataFrame([customer_data])
     prediction = model.predict(customer_data)
     return prediction
@@ -175,6 +173,3 @@ def main():
         st.write("Customer is likely to stay")
     else:
         st.write("Customer is likely to churn")
-    
-if __name__ == "__main__":
-    main()
